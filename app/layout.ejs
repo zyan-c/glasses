@@ -6,13 +6,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><%- title %></title>
-  <link rel="stylesheet" href="./assets/style/all.css">
+  <link rel="stylesheet" href="./assets/style/_layout.scss">
 </head>
 
 <body>
-  <header class="header">
-    這是 header
-  </header>
+ 
+  <!-- .header>(.logo>a)+(ul.navLink>li*4.navLink-item>a>p) -->
+  <div class="header">
+    <div class="logo">
+      <a href="#"></a>
+    </div>
+    <ul class="navLink">
+      <li class="navLink-item">
+        <a href="">
+          <p></p>
+        </a>
+      </li>
+      <li class="navLink-item">
+        <a href="">
+          <p></p>
+        </a>
+      </li>
+      <li class="navLink-item">
+        <a href="">
+          <p></p>
+        </a>
+      </li>
+      <li class="navLink-item">
+        <a href="">
+          <p></p>
+        </a>
+      </li>
+    </ul>
+  </div>
+
 
   <%- contents %>
 

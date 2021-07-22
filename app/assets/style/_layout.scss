@@ -1,0 +1,11 @@
+.header{
+    color: $primarycolor;
+    display: flex;
+    .logo a{
+        background-image: url(../images/UI-Kit/logo-new_工作區域\ 1.png);
+        width: 80px;
+        height: 48.57px;
+        display: block;
+        @include hide-text;
+    }
+}

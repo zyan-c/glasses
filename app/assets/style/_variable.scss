@@ -1,0 +1,15 @@
+$primarycolor:#AA0601;
+$secondarycolor:#111619;
+// 如果我想要設定中英同用的字型設定，如 H3 通用 fz48px; lh1.5; 這樣可以嗎？還是只能有一個值？
+$h2-title: 48px; 
+// 觀察設計稿，字體大小都是4的倍數，還是用4為 font 的 basic，再以倍數設計每個大小？
+$font: 4px;
+$font-3-half: $font*3.5;
+$font-4: $font*4;
+$font-5: $font*5;
+$font-6: $font*6;
+$font-9: $font*9;
+$font-12: $font*12;
+$font-16: $font*16;
+$font-18: $font*18;
+
