@@ -1,11 +1,212 @@
-.header{
-    color: $primarycolor;
+.topNav{
+    background-color: $primarycolor;
+    height: 108px;
+    padding: 30px 88px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     .logo a{
-        background-image: url(../images/UI-Kit/logo-new_工作區域\ 1.png);
+        background-image: url('../images/UI-Kit/logo-new_工作區域\ 1.png');
         width: 80px;
-        height: 48.57px;
+        height: 49px;
         display: block;
+        background-size: contain;
         @include hide-text;
     }
+    .menu{
+        display: flex;
+        font-family: Noto Sans TC;
+        font-size: $font-5;
+        li{
+            padding-left: 64px;
+        }
+        li a{
+            display: block;
+            color: #fff;
+        }
+    }
+}
+@include ipad(){
+    .topNav{
+        padding: 30px 39px;
+        .menu li{
+        padding-left: 40px;    
+        }
+    }
+}
+@include mobile(){
+    .topNav{
+        height: 140px;
+        flex-direction: column;
+        padding: 0 0;
+        .logo{
+            padding: 10px 163px 10px 164px;
+            border-bottom: 1px solid #fff;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .menu{
+            flex-wrap: wrap;
+            width: 100%;
+            li{
+                width: 50%;
+                padding: 8px;
+                text-align: center;
+                // .menu 裡面的 li 設定 tac 就有效，在.logo 設定 tac，但是裡面a標籤的 bg-img 就無效居中？
+                // 這時候footer因設定pt，所以跟 topNav 重疊。但是footer 內的a標籤都有設定成 db？
+                border: 1px solid #fff;
+                margin-top: -1px;
+                // 如何移除中間那條線？
+            }
+        }
+    }
+}
+.footer{
+    background-color: $primarycolor;
+    color: #fff;
+    padding-top: 32px;
+    padding-bottom: 39px;
+    .link{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .menuLink{
+            display: flex;
+            li{
+                padding-right: 48px;
+            }
+            a{
+                font-weight: 400;
+                font-size: $font-4;
+                font-family: Noto Sans TC;
+                color: #fff;
+                display: block;
+            }
+        }
+    }
+    .social{
+        display: flex;
+        li{
+            padding-left: 32px;
+        }
+        img{
+            display: block;
+        }
+    }
+    .contact{
+        font-weight: 400;
+        font-size: $font-6;
+        font-family: Roboto;
+        padding-top: 36px;
+        .phone{
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+            img{
+                display: block;
+                height: 36px;
+                width: 36px;
+                margin-right: 22px;
+            }
+        }
+        .email{
+            display: flex;
+            align-items: center;
+            img{
+                display: block;
+                height: 36px;
+                width: 36px;
+                margin-right: 16px;
+            }
+        }
+    }
+    .hr{
+        border: 0;
+        border-bottom: 1px solid #fff;
+        margin-top: 24px;
+        margin-bottom: 32px;
+    }
+    .copyright{
+        font-weight: 400;
+        font-size: $font-4;
+        font-family: Noto Sans TC;
+        display: flex;
+        justify-content: space-between;
+        .copyright-link{
+            display: flex;
+            a{
+                display: block;
+                padding-left: 48px;
+                color: #fff;
+            }
+        }
+}
+}
+@include ipad(){
+    .footer{
+        padding: 32px 0;
+        .menuLink{
+            li{
+                padding-right: 40px;
+                // devtool 上面pr依然是 48px？
+            }
+        }
+        .social{
+            li{
+                padding-left: 24px;
+                img{
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+        .contact{
+            font-size: $font-5;
+            padding-top: 18px;
+            .phone{
+                img{
+                    height: 18px;
+                    width: 18px;
+                }
+            }
+            .email{
+                img{
+                    height: 18px;
+                    width: 18px;
+                }
+        }
+        .hr{
+            margin-top: 20px;
+            margin-bottom: 24px;
+        }
+        .copyright-link{
+            a{
+                padding-left: 24px;
+                // 為什麼瀏覽器顯示無效？仍然是48px
+            }
+        }
+    }
+}
+@include mobile(){
+    .footer{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 24px 0;
+        .link{
+            width: 50%;
+            // flex-direction: column;
+            // display: block;
+            // align-content: flex-start;
+            // ac:fxe 無效
+            width: 40%;
+            .menuLink{
+                display: none;
+            }
+        }
+        .contact{
+            width: 60%;
+        }
+    }
+}
 }

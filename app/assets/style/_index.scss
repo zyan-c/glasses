@@ -1,0 +1,56 @@
+.hero{
+    background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner.png');
+    background-position: center center;
+    background-size: cover;
+    // min-height: 100vh;
+    height: 840px;
+    display: flex;
+    align-items: center;
+    .hero-content{
+        text-align: right;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        h3{
+            width: 100%;
+            font-weight: 400;
+            font-size: $font-9;
+            color: $primarycolor;
+        }
+        h1{
+            width: 100%;
+            font-weight: 700;
+            font-size: $font-16;
+            color: $primarycolor;
+        }
+    }
+}
+@include ipad{
+    // 為什麼 ipad 斷點的 h3 和 h1 fz 沒有改變？
+    .hero-content{
+        h3{
+            font-weight: 500;
+            font-size: $font-5;
+        }
+        h1{
+            font-size: $font-12;
+        }
+    }
+}
+@include mobile{
+    .hero{
+        height: 394px;
+    }
+    // 為什麼這裏的 h3 和 h1 fz 也沒有改變？
+    .hero-content{
+        h3{
+            font-weight: 500;
+            font-size: $font-4;
+            line-height: 1.875;
+        }
+        h1{
+            font-size: $font-8;
+            line-height: 2.25;
+        }
+    }
+}
