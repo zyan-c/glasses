@@ -1,0 +1,209 @@
+.productMenu{
+    display: flex;
+}
+.productMenu-list{
+    width: 33.33%;
+    border: 1px solid #DCDCDC;
+    margin-right: -1px;
+}
+.productMenu-a-tag{
+    display: block;
+    text-align: center;
+    padding: 24px 0;
+    color: #000;
+    font-weight: 500;
+    font-size: $font-8;
+    span{
+        font-size: 44px;
+        vertical-align: middle;
+        padding-right: 8px;
+    }
+}
+.productMenu-a-tag:hover{
+    box-shadow: 0 -8px $primarycolor inset;
+    // 如何出現滑進滑出效果？
+}
+.product-banner{
+    min-width: 100vw;
+    display: flex;
+}
+.banner-left{
+    background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner-1.png');
+    width: 50%;
+    height: 304px;
+    background-size: cover;
+    background-position: center center;
+}
+.banner-right{
+    background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner-2.png');
+    width: 50%;
+    height: 304px;
+    background-size: cover;
+    background-position: center center;
+}
+@include ipad{
+    .productMenu-a-tag{
+        padding: 14px 0;
+        font-size: $font-6;
+        span{
+            font-size: 32px;
+        }
+    }
+}
+@include mobile{
+    .productMenu-a-tag{
+        padding: 6px 0;
+        font-size: $font-3-half;
+        line-height: 14px;
+        span{
+            font-size: 16px;
+        }
+    }
+    .productMenu-a-tag:hover{
+        box-shadow: 0 -4px $primarycolor inset;
+    }
+    .banner-left{
+        height: 148px;
+    }
+    .banner-right{
+        height: 148px;
+    }
+}
+
+//以下是第二個section 
+
+.celluloid{
+    padding-top: 80px;
+    padding-bottom: 160px;
+    text-align: center;
+    .celluloid-title{
+        font-weight: 500;
+        font-size: $font-10-half;
+    }
+    .celluloid-descript{
+        font-size: $font-8;
+        margin-bottom: 40px;
+    }
+    .celluloid-product{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        // gap: 30px;
+    }
+    .celluloid-card{
+        width: 23%;
+        margin-bottom: 104px;
+        // 這裏有沒有不寫死距離的方法？
+    }
+    .celluloid-img{
+        width: 100%;
+        height: 164px;
+        object-fit: cover;
+    }
+    .celluloid-card-body{
+        display: flex;
+        justify-content: space-between;
+    }
+    .celluloid-sn{
+        font-size: $font-6;
+    }
+    .celluloid-price{
+        font-weight: 500;
+        font-size: $font-6;
+        color: $primarycolor;
+    }
+    .colorbox{
+        display: flex;
+    }
+    .colorbox-left{
+        width: 24px;
+        height: 24px;
+        background-color: #5F3E2D;
+        border-radius: 4px;
+        margin-right: 8px;
+    }
+    .colorbox-right{
+        width: 24px;
+        height: 24px;
+        background-color: #B75929;
+        border-radius: 4px;
+    }
+    .pagination{
+        display: flex;
+        font-size: $font-4-half;
+        justify-content: center;
+    }
+    .pagination-a{
+        display: block;
+        padding: 12px 16px;
+        color: #555555;
+        border: 1px solid #555555;
+        margin-right: -1px;
+    }
+    .pagination-a:hover{
+        color: #fff;
+        background-color: #000000;
+    }
+}
+@include ipad{
+    .celluloid{
+        padding-top: 56px;
+        padding-bottom: 96px;
+        .celluloid-title{
+            font-size: $font-8;
+        }
+        .celluloid-descript{
+            font-size: $font-6;
+            margin-bottom: 32px;
+        }
+        .celluloid-card{
+            width: 48%;
+            margin-bottom: 72px;
+        }
+    }
+}
+@include mobile{
+    .celluloid{
+        padding-top: 32px;
+        padding-bottom: 56px;
+        .celluloid-title{
+            font-size: $font-5;
+        }
+        .celluloid-descript{
+            font-size: $font-4;
+            margin-bottom: 20px;
+        }
+        .celluloid-card{
+            width: 100%;
+            margin-bottom: 32px;
+        }
+        .celluloid-img{
+            height: 166px;
+        }
+        .celluloid-card-body{
+            display: flex;
+            justify-content: space-between;
+        }
+        .celluloid-sn{
+            font-size: $font-4;
+        }
+        .celluloid-price{
+            font-size: $font-4;
+        }
+        .colorbox-left{
+            width: 16px;
+            height: 16px;
+            margin-right: 4px;
+        }
+        .colorbox-right{
+            width: 16px;
+            height: 16px;
+        }
+        .pagination{
+            justify-content: none;
+            // width: 100%;
+            // flex-grow: 1;
+            // 為什麼 ul (d:f) 設定 w100% 無法自適應 parent .container 的寬度 max-width:1200px?
+        }
+    }
+}

@@ -2,32 +2,33 @@
     background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner.png');
     background-position: center center;
     background-size: cover;
-    // min-height: 100vh;
-    height: 840px;
+    height: 100vh;
+    // height: 840px;
     display: flex;
     align-items: center;
     .hero-content{
-        // color: $font-dark;
+        color: $font-dark;
         text-align: right;
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
         h3{
+            // 因為權重問題，所以把heading全部設定成mixin再套用是不是比較好？要放在_mixin還是_base?
             width: 100%;
             font-weight: 400;
             font-size: $font-9;
-            color: $primarycolor;
+            color: $font-dark;
         }
         h1{
             width: 100%;
             font-weight: 700;
             font-size: $font-16;
-            color: $primarycolor;
+            color: $font-dark;
         }
     }
 }
 @include ipad{
-    // 為什麼 ipad 斷點的 h3 和 h1 fz 沒有改變？
+.hero{
     .hero-content{
         h3{
             font-weight: 500;
@@ -37,12 +38,11 @@
             font-size: $font-12;
         }
     }
+}   
 }
 @include mobile{
-    .hero{
-        height: 394px;
-    }
-    // 為什麼這裏的 h3 和 h1 fz 也沒有改變？
+.hero{
+    height: 394px;
     .hero-content{
         h3{
             font-weight: 500;
@@ -54,4 +54,436 @@
             line-height: 2.25;
         }
     }
+    }
+} 
+
+.service{
+    background-color: $secondarycolor;
+    padding-top: 60px;
+    padding-bottom: 80px;
+    text-align: center;
+    color: $font-dark;
+    h2{
+        font-weight: 700;
+        font-size: $font-12;
+        margin-bottom: 40px;
+    }
+    .serviceList{
+        display: flex;
+        justify-content: space-between;
+        li{
+            // 如何讓每個 li 都只有 3 條 column 的寬度？現在w23%用猜的-.-
+            width: 23%;
+        }
+        .material-icons-outlined{
+            font-size: 100px;
+            margin-bottom: 16px;
+        }
+        h4{
+            font-weight: 700;
+            font-size: $font-6;
+            margin-bottom: 8px;
+        }
+        p{
+            font-size: $font-4;
+            text-align: justify;
+        }
+    }
 }
+@include ipad{
+    .service{
+        padding-top: 40px;
+        padding-bottom: 56px;
+        h2{
+            font-size: $font-8;
+            margin-bottom: 32px;
+        }
+        .serviceList{
+            flex-wrap: wrap;
+            li{
+                // 這裏的45%也是猜的
+                width: 45%;
+            }
+        }
+    }
+}
+@include mobile{
+    .service{
+        padding-top: 32px;
+        padding-bottom: 8px;
+        h2{
+            font-size: $font-6;
+            margin-bottom: 20px;
+        }
+        .serviceList{
+            li{
+                width: 100%;
+                margin-bottom: 32px;
+            }
+            p{
+                width: 225px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+.product{
+    padding-top: 60px;
+    padding-bottom: 80px;
+    color: $font-dark;
+    text-align: center;
+    h2{
+        font-weight: 700;
+        font-size: $font-12;
+        margin-bottom: 40px;
+    }
+    .productList-item{
+        display: flex;
+        align-items: center;
+        margin-bottom: 32px;
+        color: $primarycolor;
+        img{
+            display: block;
+            width: 60%;
+        }
+        span{
+            font-size: 48px;
+            padding-right: 8px;
+            vertical-align: middle;
+        }
+        h2{
+            font-style: italic;
+            font-weight: 900;
+            font-family: roboto;
+            margin-bottom:0;
+        }
+    }
+}
+@include ipad{
+    .product{
+        padding-top: 40px;
+        padding-bottom: 56px;
+        h2{
+            font-weight: 700;
+            font-size: $font-8;
+            margin-bottom: 32px;
+        }
+        .productList-item{
+            margin-bottom: 8px;
+            span{
+                 font-size: 40px;
+            }
+            h2{
+                font-size: $font-7;
+            }
+        }
+        .flex-row-reverse{
+            flex-direction: row;
+            .ml-3{
+                margin-left: 0;
+                margin-right: 30px;
+            }
+        }
+    }
+}
+@include mobile{
+    .product{
+        padding-top: 32px;
+        padding-bottom: 32px; //40-8(li的mb)
+        h2{
+            font-size: $font-5;
+            margin-bottom: 20px;
+        }
+        .productList-item{
+            position: relative;
+            img{
+                width: 100%;
+                margin: 0 auto;
+            }
+            .product-title{
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+
+.design{
+    background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/bg.png');
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 80px;
+    .design-title{
+        font-weight: 700;
+        font-size: $font-12;
+        color: #fff;
+        margin-bottom: 40px;
+    }
+    .designList{
+        display: flex;
+       
+    }
+    .doubleA{
+        position: relative;
+    }
+    .youth{
+        position: relative;
+    }
+    .designList-img{
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .designList-title{
+        font-weight: 700;
+        font-size: $font-18;
+        color: $primarycolor;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+    }
+}
+@include ipad{
+    .design{
+        padding-top: 40px;
+        padding-bottom: 56px;
+        .design-title{
+            font-size: $font-8;
+            margin-bottom: 32px;
+        }
+        .designList-title{
+            font-size: $font-8;
+        }
+    }
+}
+@include mobile{
+    .design{
+        padding-top: 32px;
+        padding-bottom: 40px;
+        .design-title{
+            font-size: $font-5;
+            margin-bottom: 20px;
+        }
+        .designList-title{
+            font-size: $font-8;
+        }
+        .designList{
+            flex-direction: column;
+        }
+        .doubleA{
+            margin-right: 0;
+            margin-bottom: 16px;
+        }
+    }
+}
+
+.testimonial{
+    padding-top: 60px;
+    padding-bottom: 80px;
+    text-align: center;
+    color: $font-dark;
+    .testimonial-title{
+        font-weight: 700;
+        font-size: $font-12;
+        margin-bottom: 40px;
+    }
+    .testimonial-card{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .card{
+        width: 23%;
+        border: 1px solid #DEE2E6;
+        border-radius: 4px;
+        box-shadow: 0px 2px 6px #00000029 ;
+        text-align: left;
+        color: #000;
+        position: relative;
+    }
+    .card-img{
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 4px 4px 0 0;
+    }
+    .card-body{
+        padding: 16px;
+    }
+    .card-name{
+        font-weight: 500;
+        font-size: $font-3-half;
+        margin-bottom: 8px;
+    }
+    .card-content{
+        font-weight: 400;
+        font-size: $font-4;
+        margin-bottom: 54px;
+    }
+    .card-date{
+        position: absolute;
+        left: 16px;
+        bottom: 16px;
+        font-weight: 400;
+        font-size: $font-3-half;
+        color: #707070;
+    }
+}
+@include ipad{
+    .testimonial{
+        padding-top: 40px;
+        padding-bottom: 24px; //56-32(.card mb)
+        .testimonial-title{
+            font-size: $font-8;
+            margin-bottom: 32px;
+        }
+        .card{
+            width: 49%;
+            margin-bottom: 32px;
+        }
+        .card-body{
+            padding: 16px 24px;
+        }
+        .card-date{
+            left: 24px;
+        }
+    }
+}
+@include mobile{
+    .testimonial{
+        padding-top: 32px;
+        .testimonial-title{
+            font-size: $font-5;
+            margin-bottom: 20px;
+        }
+        .card{
+            width: 100%;
+            margin-bottom: 16px;
+        }
+    }
+}
+
+
+.contact{
+    background-color: $secondarycolor;
+    padding-top: 60px;
+    padding-bottom: 80px;
+    text-align: center;
+    .contact-title{
+        font-weight: 700;
+        font-size: $font-12;
+        margin-bottom: 24px;
+    }
+    // 讓 p 和 form 居中
+    .contact-wrap{
+        width: 66.66%; // 100/12*8 = 66.66%
+        margin: 0 auto;
+    }
+    .contact-des{
+        font-weight: 400;
+        font-size: $font-5;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    .label{
+        display: block;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 4px;
+        font-weight: 400;
+        font-size: $font-4;
+        }
+    .input{
+        display: block;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 16px;
+        height: 50px;
+        background-color: $secondarycolor;
+        border: 1px solid #000;
+        font-weight: 400;
+        font-size: $font-4;
+    }
+    input::placeholder{
+        opacity: 20%;
+        padding-left: 16px;
+    }
+    .checkbox{
+        display: block;
+        text-align-last: left;
+        margin-bottom: 40px;
+    }
+    .input-check{
+        margin: 0;
+        margin-right: 4px;
+    }
+    .btn{
+        background-color: $primarycolor;
+        color: #fff;
+        padding: 16px 143px;
+        border: none;
+        font-weight: 700;
+        font-size: $font-4;
+    }
+    .btn:hover{
+        background-color: $font-dark;
+    }
+}
+@include ipad{
+    .contact{
+        padding-top: 40px;
+        padding-bottom: 56px;
+        .contact-title{
+            font-size: $font-8;
+        }
+        .contact-des{
+            font-size: $font-4;
+            margin-bottom: 16px;
+        }
+        .label{
+            margin-bottom: 3px;
+            font-size: $font-3-half;
+            }
+        .input{
+            margin-bottom: 8px;
+            height: 36px;
+            font-size: $font-3-half;
+        }
+        .checkbox{
+            font-size: $font-3-half;
+            margin-bottom: 20px;
+        }
+        .btn{
+            padding: 10px 77px;
+            font-size: $font-3-half;
+        }
+    }
+}
+@include mobile{
+    .contact{
+        padding-top: 30px;
+        padding-bottom: 40px;
+        .contact-title{
+            font-size: $font-5;
+            margin-bottom: 20px;
+        }
+        .contact-des{
+            margin-bottom: 8px;
+        }
+        .label{
+            margin-bottom: 4px;
+            }
+        .btn{
+            padding: 8px 54.5px;
+        }
+    }
+}
+
+    

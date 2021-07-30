@@ -1,8 +1,9 @@
 body{
-    font-family: 'Noto Sans TC', 'Roboto', sans-serif;
+    font-family: 'Roboto', 'Noto Sans TC', sans-serif;
     line-height: 1.5;
 }
 
+// 待刪？
 .h5{
     font-weight: normal;
     font-size: 20px;
@@ -18,4 +19,23 @@ body{
     @include mobile{
         max-width: 767px;
     }
+}
+
+.flex-row-reverse{
+    flex-direction: row-reverse;
+}
+
+.flex-align-items{
+    align-items: flex-start;
+}
+
+.mr-3{
+    margin-right: 30px;
+}
+
+.ml-3{
+    margin-left: 30px;
+}
+.mb-1{
+   margin-bottom: 8px; 
 }
