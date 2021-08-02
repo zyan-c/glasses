@@ -3,8 +3,9 @@
 @import'./mixin/variable';
 @import'./base/reset';
 @import'./mixin/mixin';
-@import'./layout/layout';
 @import'./base/base';
+@import'./mixin/grid';
+@import'./layout/layout';
 // pages
 @import'./pages/index';
 @import'./pages/optical';

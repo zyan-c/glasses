@@ -46,6 +46,9 @@
     }
 }
 @include mobile{
+    .main{
+        margin-top: 132.13px;
+    }
     .qa{
         padding-top: 28px;
         padding-bottom: 36px; //56-20(.ans mb20px)
