@@ -15,34 +15,3 @@ img{
     max-width: 100%;
     height: auto;
 }
-
-.container{
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 0 15px;
-    @include ipad{
-        max-width: 992px;
-    }
-    @include mobile{
-        max-width: 767px;
-    }
-}
-
-.flex-row-reverse{
-    flex-direction: row-reverse;
-}
-
-.flex-align-items{
-    align-items: flex-start;
-}
-
-.mr-3{
-    margin-right: 30px;
-}
-
-.ml-3{
-    margin-left: 30px;
-}
-.mb-1{
-   margin-bottom: 8px; 
-}
