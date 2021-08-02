@@ -47,17 +47,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-a {
-  text-decoration: none; }
-
-img {
-  max-width: 100%;
-  height: auto; }
-
-*, *::before, *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
-
 .navbar {
   width: 100%;
   position: absolute;
@@ -275,44 +264,20 @@ img {
   .copyright-aTag {
     padding-left: 0px; } }
 
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
 body {
   font-family: 'Roboto', 'Noto Sans TC', sans-serif;
   line-height: 1.5; }
 
-.h5 {
-  font-weight: normal;
-  font-size: 20px; }
+a {
+  text-decoration: none; }
 
-.container {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 15px; }
-  @media (max-width: 992px) {
-    .container {
-      max-width: 992px; } }
-  @media (max-width: 767px) {
-    .container {
-      max-width: 767px; } }
-
-.flex-row-reverse {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse; }
-
-.flex-align-items {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start; }
-
-.mr-3 {
-  margin-right: 30px; }
-
-.ml-3 {
-  margin-left: 30px; }
-
-.mb-1 {
-  margin-bottom: 8px; }
+img {
+  max-width: 100%;
+  height: auto; }
 
 .hero {
   background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner.png");
@@ -739,6 +704,9 @@ body {
       margin-bottom: 4px; }
     .contact .btn {
       padding: 8px 54.5px; } }
+
+.main {
+  margin-top: 109px; }
 
 .productMenu {
   display: -webkit-box;
