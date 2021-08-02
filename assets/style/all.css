@@ -58,19 +58,23 @@ img {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
-.topNav {
-  background-color: #AA0601;
-  padding: 30px 88px;
+.navbar {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #AA0601;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  padding: 30px 88px;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
-  .topNav .logo a {
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .navbar-logo-atag {
     background-image: url("../images/UI-Kit/logo-new_工作區域 1.png");
     width: 80px;
     height: 49px;
@@ -79,46 +83,57 @@ img {
     text-indent: 101%;
     overflow: hidden;
     white-space: nowrap; }
-  .topNav .menu {
+  .navbar-menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    font-family: Noto Sans TC;
     font-size: 20px; }
-    .topNav .menu a {
-      display: block;
-      color: #fff;
-      padding-left: 64px; }
+  .navbar-menu-atag {
+    display: block;
+    color: #fff;
+    padding-left: 64px; }
+    .navbar-menu-atag:hover {
+      color: #650300; }
 
 @media (max-width: 992px) {
-  .topNav {
+  .navbar {
     padding: 30px 39px; }
-    .topNav .menu a {
+    .navbar-menu-atag {
       padding-left: 40px; } }
 
 @media (max-width: 767px) {
-  .topNav {
+  .navbar {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 0 0; }
-    .topNav .logo a {
-      padding: 10px 0;
-      margin: 10px 0;
-      display: block; }
-    .topNav .menu {
+    .navbar-logo {
+      width: 100%;
+      border-bottom: 1px solid #fff;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      padding: 10px 0; }
+    .navbar-logo-atag {
+      width: 48px;
+      height: 29.14px; }
+    .navbar-menu {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
       width: 100%;
       font-size: 16px; }
-      .topNav .menu li {
+      .navbar-menu-list {
+        width: 50%;
         width: 50%;
         border: 1px solid #fff;
-        margin-top: -1px; }
-        .topNav .menu li a {
-          padding: 8px 0;
-          text-align: center; } }
+        margin-top: -1px;
+        text-align: center; }
+      .navbar-menu-atag {
+        padding: 8px 0; } }
 
 .footer {
   padding-top: 32px;
@@ -303,13 +318,14 @@ body {
   background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner.png");
   background-position: center center;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  background-attachment: fixed; }
   .hero .hero-content {
     color: #650300;
     text-align: right;
