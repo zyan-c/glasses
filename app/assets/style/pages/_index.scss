@@ -2,10 +2,11 @@
     background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner.png');
     background-position: center center;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
     // height: 840px;
     display: flex;
     align-items: center;
+    background-attachment: fixed;
     .hero-content{
         color: $font-dark;
         text-align: right;

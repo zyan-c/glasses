@@ -1,11 +1,14 @@
-.topNav{
-    background-color: $primarycolor;
-    // height: 108px;
-    padding: 30px 88px;
+.navbar{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $primarycolor;
     display: flex;
-    justify-content: space-between;
+    padding: 30px 88px;
     align-items: center;
-    .logo a{
+    justify-content: space-between;
+    &-logo-atag{
         background-image: url('../images/UI-Kit/logo-new_工作區域\ 1.png');
         width: 80px;
         height: 49px;
@@ -13,52 +16,62 @@
         background-size: contain;
         @include hide-text;
     }
-    .menu{
+    &-menu{
         display: flex;
-        font-family: Noto Sans TC;
         font-size: $font-5;
-        a{
-            display: block;
-            color: #fff;
-            padding-left: 64px;
+    }
+    &-menu-atag{
+        display: block;
+        color: #fff;
+        padding-left: 64px;
+        &:hover{
+            color: $font-dark;
         }
     }
 }
-@include ipad(){
-    .topNav{
+@include ipad{
+    .navbar{
         padding: 30px 39px;
-        .menu a{
-        padding-left: 40px;    
+        &-menu-atag{
+            padding-left: 40px;
         }
     }
 }
-@include mobile(){
-    .topNav{
+@include mobile{
+    .navbar{
         flex-direction: column;
         padding: 0 0;
-        .logo a{
-            // 如何增加點擊範圍？？？
+        &-logo{
+            width: 100%;
+            border-bottom: 1px solid #fff;
+            display: flex;
+            justify-content: center;
             padding: 10px 0;
-            margin: 10px 0;
-            display: block;
         }
-        .menu{
+        &-logo-atag{
+            width: 48px;
+            height: 29.14px;
+            // padding: 10px 0;
+            // padding 無效
+        }
+        &-menu{
             flex-wrap: wrap;
             width: 100%;
             font-size: $font-4;
-            li{
+            &-list{
+                width: 50%;
                 width: 50%;
                 border: 1px solid #fff;
                 margin-top: -1px;
-                // 如何移除中間那條線？
-                a{
-                    padding: 8px 0;
-                    text-align: center;
-                }
+                text-align: center;
+            }
+            &-atag{
+                padding: 8px 0;
             }
         }
     }
 }
+
 
 .footer{
     padding-top: 32px;
@@ -206,4 +219,4 @@
     .copyright-aTag{
         padding-left: 0px;
     }
-}
+} 

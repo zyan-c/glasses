@@ -1,12 +1,12 @@
+// googlefont
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Roboto:ital,wght@0,400;0,700;1,900&display=swap');
-@import'reset';
-@import'variable';
-@import'mixin';
-@import'layout';
-// @import'layout2';
-@import'grid';
-@import'base';
-@import'index';
-@import'optical';
-@import'location';
-@import'qa';
+@import'./mixin/variable';
+@import'./base/reset';
+@import'./mixin/mixin';
+@import'./layout/layout';
+@import'./base/base';
+// pages
+@import'./pages/index';
+@import'./pages/optical';
+@import'./pages/location';
+@import'./pages/qa';
